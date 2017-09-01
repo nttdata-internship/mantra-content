@@ -3,13 +3,13 @@
         <span class="hipster img-fluid img-rounded"></span>
     </div>
     <div class="col-md-9">
-        <h1 class="display-4" >Welcome, Xenia!</h1>
-        <p class="lead" jhiTranslate="home.subtitle">This is your homepage</p>
+        <h1 class="display-4" >Welcome, Stefan!</h1>
+        <p class="lead" jhiTranslate="home.subtitle">Blabla is working</p>
 
         <div [ngSwitch]="isAuthenticated()">
             <div class="alert alert-success" *ngSwitchCase="true">
                 <span *ngIf="account" jhiTranslate="home.logged.message"
-                    translateValues="{username: '{{account.login}}'}"> You are logged in as mama "{{account.login}}". </span>
+                    translateValues="{username: '{{account.login}}'}"> You are logged in as "{{account.login}}". </span>
             </div>
 
             <div class="alert alert-warning" *ngSwitchCase="false">
@@ -23,8 +23,8 @@
             </div>
         </div>
 
-        <p jhiTranslate="home.question">
-        ?????????????????????????????????????????????
+        <p>
+        	Can i take your order?
         </p>
 
         <ul>
@@ -36,7 +36,7 @@
         </ul>
 
         <p>
-            <span jhiTranslate="home.like">If you like JHipster, don't forget to give us a star on</span> <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" jhiTranslate="home.github">GitHub</a>!
+            <span>Test</span> <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" jhiTranslate="home.github">GitHub</a>!
         </p>
     </div>
 </div>
