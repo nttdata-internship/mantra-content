@@ -17,6 +17,7 @@ import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.annotation.PostConstruct;
 import java.lang.management.ManagementFactory;
@@ -56,6 +57,13 @@ public class MetricsConfiguration extends MetricsConfigurerAdapter {
     public MetricRegistry getMetricRegistry() {
         return metricRegistry;
     }
+    
+    @Bean(name = "multipartResolver")
+  	public CommonsMultipartResolver multipartResolver() {
+  		CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+  		multipartResolver.setMaxUploadSize(100000);
+  		return new CommonsMultipartResolver();
+  	}
 
     @Override
     @Bean

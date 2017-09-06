@@ -22,6 +22,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import java.io.File;
 import java.nio.file.Paths;
@@ -168,6 +169,7 @@ public class WebConfigurer implements ServletContextInitializer, EmbeddedServlet
         }
         return new CorsFilter(source);
     }
+    
 
     @Autowired(required = false)
     public void setMetricRegistry(MetricRegistry metricRegistry) {
