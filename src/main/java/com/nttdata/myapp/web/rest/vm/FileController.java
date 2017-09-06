@@ -57,7 +57,15 @@ public class FileController {
 	}
 
 	
-
+	//Acces via console curl -X POST \
+//	  http://localhost:8080/content/upload \
+//		  -H 'cache-control: no-cache' \
+//		  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+//		  -H 'postman-token: b718f3cb-4124-8c5f-138b-d6bfb8bc2917' \
+//		  -F 'file=@C:\Users\stefan.neacsu\eclipse\java-oxygen\eclipse\eclipse.ini'
+//		  
+		  
+   // Acces via browser: ???
 	@RequestMapping(value = "/upload", method = RequestMethod.POST)
 	public String submit(@RequestParam("file") MultipartFile file) {
 		return file.getOriginalFilename();
