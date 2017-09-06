@@ -58,12 +58,7 @@ public class MetricsConfiguration extends MetricsConfigurerAdapter {
         return metricRegistry;
     }
     
-    @Bean(name = "multipartResolver")
-  	public CommonsMultipartResolver multipartResolver() {
-  		CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
-  		multipartResolver.setMaxUploadSize(100000);
-  		return new CommonsMultipartResolver();
-  	}
+   
 
     @Override
     @Bean

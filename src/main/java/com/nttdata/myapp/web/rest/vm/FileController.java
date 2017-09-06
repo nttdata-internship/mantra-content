@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -33,7 +34,7 @@ public class FileController {
 	}
 
 	@RequestMapping(value = "/persons", method = RequestMethod.POST, produces = { "application/xml",
-			"application/json","application/csv" })
+			"application/json"})
 	public Person getAllPersons(
 	// (@PathVariable(required=false) String firstName, @RequestParam String lastName,
 	// @RequestParam Date birthDate
@@ -56,10 +57,18 @@ public class FileController {
 	}
 
 	
-
+	//Acces via console curl -X POST \
+//	  http://localhost:8080/content/upload \
+//		  -H 'cache-control: no-cache' \
+//		  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+//		  -H 'postman-token: b718f3cb-4124-8c5f-138b-d6bfb8bc2917' \
+//		  -F 'file=@C:\Users\stefan.neacsu\eclipse\java-oxygen\eclipse\eclipse.ini'
+//		  
+		  
+   // Acces via browser: ???
 	@RequestMapping(value = "/upload", method = RequestMethod.POST)
-	public String submit( MultipartFile file) {
-		return file.getName();
+	public String submit(@RequestParam("file") MultipartFile file) {
+		return file.getOriginalFilename();
 	}
 
 	// 1. Return Person json/xml/csv with following fields: fName, lName, birthDate,
