@@ -5,7 +5,7 @@
         </a>
         <a class="navbar-brand logo float-left" routerLink="/" (click)="collapseNavbar()">
             <span class="logo-img"></span>
-            <span class="navbar-title">Mantra Synchronization</span> <span class="navbar-version">{{version}}</span>
+            <span jhiTranslate="global.title" class="navbar-title">MyApp</span> <span class="navbar-version">{{version}}</span>
         </a>
     </div>
     <div class="navbar-collapse collapse" id="navbarResponsive" [ngbCollapse]="isNavbarCollapsed" [ngSwitch]="isAuthenticated()">
@@ -100,31 +100,6 @@
                 </ul>
             </li>
             <li ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="synchronization-menu">
-                  <span *ngIf="!getImageUrl()">
-                    <i class="fa fa-refresh" aria-hidden="true"></i>
-                    <span >
-                      Synchronization
-                    </span>
-                    <b class="caret"></b>
-                  </span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
-                    <li>
-                        <a class="dropdown-item" routerLink="download" routerLinkActive="active" (click)="collapseNavbar()">
-                            <i class="fa fa-cloud-download" aria-hidden="true"></i>
-                            <span >Download</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="upload" routerLinkActive="active" (click)="collapseNavbar()">
-                            <i class="fa fa-cloud-upload" aria-hidden="true"></i>
-                            <span>Upload</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                 <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="account-menu">
                   <span *ngIf="!getImageUrl()">
                     <i class="fa fa-user" aria-hidden="true"></i>
@@ -168,8 +143,5 @@
                             <span jhiTranslate="global.menu.account.register">Register</span>
                         </a>
                     </li>
-                </ul>
-            </li>
-        </ul>
     </div>
 </nav>
