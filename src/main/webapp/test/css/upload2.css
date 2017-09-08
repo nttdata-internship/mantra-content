@@ -63,6 +63,7 @@ nav.bg-dark {
 
 a.navbar-brand {
 	font-family: Megrim, serif;
+	font-weight: 700;
 }
 
 .nav-link {
