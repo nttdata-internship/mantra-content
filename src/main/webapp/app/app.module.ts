@@ -26,8 +26,12 @@ import {
     ErrorComponent
 } from './layouts';
 
+import {JhipsterHiThereModule} from './hi-there/hi-there.module';
+
 @NgModule({
     imports: [
+JhipsterHiThereModule,
+
         BrowserModule,
         LayoutRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-'}),
