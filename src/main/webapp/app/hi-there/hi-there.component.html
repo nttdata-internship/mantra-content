@@ -13,14 +13,15 @@
 
 -->
 
-
+ 
  <div class="jumbotron text-center" style="background:transparent;">
+   <jhi-alert></jhi-alert>
         <h1 class="display-3">Upload your files</h1>
         <p class="lead">Upload and synchronize your files across all devices.</p>
         <label class="btn btn-default btn btn-primary btn-lg">
             Click to upload
-            <form  method="POST" enctype=multipart/form-data action="http://localhost:8080/content/upload">
-            	<input type="file" id="uploadFileInput" hidden  name="file"  onchange="doUpload()">
+            <form  method="POST" enctype="multipart/form-data" action="http://localhost:8080/content/upload">
+            	<input type="file" #uploadFileInput hidden  name="file"  (change)="doUpload($event)">
             </form>
         </label>
       </div>
