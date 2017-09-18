@@ -1,6 +1,6 @@
 {
     "home": {
-        "title": "Welcome, Java Hipster!",
+        "title": "Mantra Synchronization",
         "subtitle": "File Synchronization across multiple devices.",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."

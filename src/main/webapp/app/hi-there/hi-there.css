@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Megrim|Roboto+Slab');
 
 .jumbotron.text-center{
-    background: url('http://static.simpledesktops.com/uploads/desktops/2011/07/07/Safari_Desktop_Picture.png') no-repeat center center fixed !important;
+    background: url('http://static.simpledesktops.com/uploads/desktops/2016/08/11/Glasgow.png') no-repeat fixed !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -17,21 +17,21 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
   height: 80px;
-  line-height: 60px; /* Vertically center the text there */
+  line-height: 60px;
   background-color: #f5f5f5;
 }
 
 .display-3 {
 	color: #fff;
-	padding-top: 160px;
 	font-family: Roboto-Slab, serif;
+  margin-bottom: 5px;
 }
 
 .lead {
 	color: #fff;
 	font-family: Roboto, serif;
+  margin-bottom: 80px;
 }
 
 .btn-file {
@@ -52,6 +52,7 @@
     background: white;
     cursor: inherit;
     display: block;
+    margin-bottom: 80px;
 }
 
 .nav.navbar-expand-lg.navbar-dark.bg-dark.fixed-top {
@@ -72,4 +73,8 @@ a.navbar-brand {
   font-size: 1.05em;
   line-height: 2em;
   letter-spacing: .02em;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #0D7377 !important;
 }

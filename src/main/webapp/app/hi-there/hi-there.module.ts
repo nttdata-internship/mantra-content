@@ -5,7 +5,7 @@ import { HI_THERE_ROUTE, HiThereComponent } from './';
 
 @NgModule({
     imports: [
-        RouterModule.forRoot([ HI_THERE_ROUTE ], { useHash: true })
+        RouterModule.forRoot([HI_THERE_ROUTE], { useHash: true })
     ],
     declarations: [
         HiThereComponent,
@@ -16,4 +16,4 @@ import { HI_THERE_ROUTE, HiThereComponent } from './';
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class JhipsterHiThereModule {}
+export class JhipsterHiThereModule { }
