@@ -1,13 +1,16 @@
 /* ==========================================================================
 Navbar
 ========================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Megrim|Roboto+Slab');
+
+
 .navbar-version {
-    font-size: 10px;
+    font-size: 12px;
     color: #ccc
 }
 
 .jh-navbar {
-    background-color: #353d47;
+    background-color:  #0D7377;
     padding: .2em 1em;
 }
 
@@ -64,10 +67,14 @@ Navbar
     display: inline-block;
     vertical-align: middle;
     color: #fff;
+    font-family: Megrim, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .nav-link {
     color: #fff;
+    font-family: Roboto-Slab, sans-serif;
 }
 
 /* ==========================================================================
@@ -86,7 +93,7 @@ Logo styles
 
 .logo-img {
     height: 100%;
-    background: url("../../../content/images/logo-jhipster.png") no-repeat center center;
+    background: url("../../../content/images/cloud.png") no-repeat center center;
     background-size: contain;
     width: 100%;
 }

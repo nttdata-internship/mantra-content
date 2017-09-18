@@ -1,0 +1,31 @@
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Upload - Mantra Synchronization</title>
+</head>
+
+<body>
+	<div class="jumbotron text-center" style="background: transparent;">
+		<jhi-alert></jhi-alert>
+		<h1 class="display-3">Upload your files</h1>
+		<p class="lead">Upload and synchronize your files across your
+			devices</p>
+		<label class="btn btn-default btn btn-primary btn-lg">Click to
+			upload
+			<form method="POST" enctype="multipart/form-data"
+				action="http://localhost:8080/content/upload">
+				<input type="file" #uploadFileInput hidden name="file"
+					(change)="doUpload($event)">
+			</form>
+		</label>
+	</div>
+
+	<div class="row marketing">
+		<div class="col-lg-6"></div>
+	</div>
+</body>
