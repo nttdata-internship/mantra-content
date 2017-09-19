@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response, Headers, URLSearchParams, RequestOptions } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { JhiAlertService } from 'ng-jhipster';
+import { NgModule }      from '@angular/core';
+
+
+
 @Injectable()
 @Component({
   selector: 'jhi-hi-there',
@@ -9,16 +13,32 @@ import { JhiAlertService } from 'ng-jhipster';
   styleUrls: [
     'hi-there.css'
   ]
+  
 })
 export class HiThereComponent implements OnInit {
 
   message: string;
+  files=[];
 
-
-  constructor(private http: Http, private alertService: JhiAlertService, ) {
+  constructor(private http: Http, private alertService: JhiAlertService ) {
   }
 
   ngOnInit() {
+    this.list();
+    
+  }
+  
+  list()
+  {
+    	this.files=[];
+     this.http.get('http:\\\\localhost:8080\\content\\ftp\\list')
+        .flatMap((response) => response.json())
+        .subscribe((data) => {
+        	
+        	this.files.push(data);
+        });
+        console.log(this.files);
+    
   }
 
   doUpload($event) {
@@ -35,13 +55,15 @@ export class HiThereComponent implements OnInit {
     headers.append('Access-Control-Allow-Headers', 'Origin, Content-Type, X-Auth-Token');
     const options = new RequestOptions({ headers: headers });
     const url = 'localhost:8080\\content\\upload';
-    this.http.post('http:\\\\localhost:8080\\content\\upload', formData, options).subscribe(data => {
-		alert('Upload Success');
-          this.alertService.error('1', '2', null);
+    this.http.post('http:\\\\localhost:8080\\content\\ftp\\upload', formData, options).subscribe(data => {
+		console.log('Upload Successfull');
+    	this.list();   
     }, error => {
       console.log(formData);
       console.log(JSON.stringify(error.json()));
     });
+    
+    
 
 
   }

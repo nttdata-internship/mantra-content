@@ -1,17 +1,5 @@
-<head>
-
-<meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
-
-<title>Upload - Mantra Synchronization</title>
-</head>
-
-<body>
-	<div class="jumbotron text-center" style="background: transparent;">
-		<jhi-alert></jhi-alert>
+<div class="jumbotron text-center" style="background: transparent;">
+		
 		<h1 class="display-3">Upload your files</h1>
 		<p class="lead">Upload and synchronize your files across your
 			devices</p>
@@ -25,7 +13,39 @@
 		</label>
 	</div>
 
-	<div class="row marketing">
-		<div class="col-lg-6"></div>
+
+
+
+	<!-- 
+	<div *ngIf="files.length > 0" >
+	<p>There are {{files.length}} files uploaded</p>
+		<div *ngFor='let f of files'>
+		<li>{{f}} <a href='http:\\localhost:8080\content\ftp\download\{{f}}'>Download</a></li>
+		</div>
 	</div>
-</body>
+	 
+	 
+  <div *ngIf="files.length >0" >
+<div *ngFor='let f of files'>
+  <form action="#">
+  <p>
+    <input type="checkbox" id="test1" />
+    <label for="test1">{{f}}</label>
+  </p>
+</form>
+</div>
+</div>
+<a href='http:\\localhost:8080\content\ftp\download\{{f}}' class="buttonDownload">Download</a>
+--->
+
+<div *ngIf="files.length > 0">
+<h1>There are {{files.length}} files uploaded</h1>
+<div *ngFor='let f of files' class="button-center">
+<label>
+    <input type="checkbox" name="" value="" />
+    <span>{{f}}</span>
+</label>
+</div>
+</div>
+<input type="checkbox" name="" value="" />
+<span><a href='http:\\localhost:8080\content\ftp\download\{{f}}'>Download</a></span>
